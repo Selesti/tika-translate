@@ -22,7 +22,9 @@
     },
     "require-dev": {
         "mockery/mockery": "dev-master@dev",
-        "phpunit/phpunit": "^7.3"
+        "phpunit/phpunit": "^7.3",
+        "illuminate/support": "^5.7",
+        "symfony/var-dumper": "^4.1"
     },
     "autoload": {
         "psr-4": {
