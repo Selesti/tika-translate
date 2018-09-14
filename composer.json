@@ -1,0 +1,32 @@
+{
+    "name": "selesti/tika-translate",
+    "description": "A vanilla PHP wrapper for Apache Tika and Google Cloud Translate to help them work in harmony.",
+    "keywords": ["translate", "ocr", "gcloud", "google", "tika", "apache"],
+    "homepage": "https://github.com/Selesti/tika-translate",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Owen Melbourne",
+            "email": "owen@selesti.com",
+            "homepage": "https://www.selesti.com",
+            "role": "Developer"
+        }
+    ],
+    "bin": [
+        "bin/tika-server.jar", "bin/tika"
+    ],
+    "require": {
+        "php": ">=7.1",
+        "vaites/php-apache-tika": "^0.4.4",
+        "google/cloud": "^0.78.0"
+    },
+    "require-dev": {
+        "mockery/mockery": "dev-master@dev",
+        "phpunit/phpunit": "^7.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "Selesti\\TikaTranslate\\": ["src"]
+        }
+    }
+}

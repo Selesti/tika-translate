@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+BIN_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null && pwd )"
+BIN_FILE="$BIN_DIR/tika-server.jar"
+
+if [ ! -f $BIN_FILE ]; then
+    echo "Apache Tika not found... Downloading";
+    wget -O $BIN_FILE http://www-us.apache.org/dist/tika/tika-server-1.18.jar;
+    chmod +x $BIN_FILE;
+fi
+
+echo "Starting Apache Tika";
+
+java -jar $BIN_FILE;
