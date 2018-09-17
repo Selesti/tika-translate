@@ -11,7 +11,7 @@ if (!function_exists('dd')) {
     }
 }
 
-abstract class BaseTest extends \PHPUnit\Framework\TestCase
+abstract class BaseTestClass extends \PHPUnit\Framework\TestCase
 {
 
 }

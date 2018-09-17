@@ -18,7 +18,7 @@
     "require": {
         "php": ">=7.1",
         "vaites/php-apache-tika": "^0.4.4",
-        "google/cloud": "^0.78.0"
+        "google/cloud-translate": "^1.2"
     },
     "require-dev": {
         "mockery/mockery": "dev-master@dev",
@@ -30,5 +30,8 @@
         "psr-4": {
             "Selesti\\TikaTranslate\\": ["src"]
         }
+    },
+    "autoload-dev": {
+        "files": ["tests/BaseTestClass.php"]
     }
 }

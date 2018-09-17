@@ -119,3 +119,6 @@ fabric.properties
 
 # Apache Tika
 tika-server.jar
+
+# Google Cloud
+google.json

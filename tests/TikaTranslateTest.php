@@ -1,8 +1,9 @@
 <?php
 
 use Selesti\TikaTranslate\TikaService;
+use Selesti\TikaTranslate\TranslateService;
 
-class TikaTranslateTest extends BaseTest
+class TikaTranslateTest extends BaseTestClass
 {
     public function test_i_can_connect_to_tika()
     {
@@ -29,5 +30,23 @@ class TikaTranslateTest extends BaseTest
         // assert
         $this->assertEquals('bonjour', $text);
     }
+
+    public function test_i_can_translate_a_string()
+    {
+        // arrange
+        $translator = new TranslateService();
+
+        // action
+        $translation = $translator->translate('bonjour', [
+            'target' => 'de'
+        ]);
+
+        dd($translation);
+
+        // assert
+        $this->assertEquals('Hallo', $translation);
+
+    }
+
 
 }
