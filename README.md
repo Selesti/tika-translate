@@ -101,3 +101,27 @@ Testing
 We've got a small set of phpunit tests which can be run by changing into the `/vendor/selesti/tika-translate` directory, running `composer install --dev` then executing `phpunit`.
 
 You will need to make sure the tika server is running, which can be started by running `/vendor/selesti/tika-translate/bin/tika`
+
+Warnings
+-----
+
+Google translate encodes certain characters, so when you get your response back from them you must watch out for any changes in encoding e.g.
+
+Request:
+
+```
+c'est un test s'il vous plaît ignorer
+```
+
+Response:
+```
+it&#39;s a test please ignore
+```
+
+Doing such things as:
+
+```php
+$decoded = html_entity_decode($response, ENT_QUOTES);
+```
+
+Can help resolve it.
